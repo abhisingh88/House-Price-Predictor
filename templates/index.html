@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+
+
+<div id="bg" class="container-fluid"
+    style="min-width: 500px ;min-height: 700px;background-image: url(../static/form.jpg) ;background-size: 1800px 800px;">
+    <h1 class="text-center text-primary py-4" style="font-size: 50px; font-family: cursive;">Keep calm and let's find a
+        beautiful home for you</h1>
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="d-flex align-items-center mt-5">
+            <form action="/" method="POST">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="query" id="owner" value="own" checked>
+                    <label class="form-check-label text-error" for="owner">
+                        <strong style="font-size: 30px; padding: 1rem; font-family: cursive;">Want to Buy a
+                            House</strong>
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="query" id="rent" value="rent">
+                    <label class="form-check-label text-error" for="rent">
+                        <strong style="font-size: 30px; padding: 1rem; font-family: cursive;">Want to Rent a
+                            House</strong>
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Next</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}
