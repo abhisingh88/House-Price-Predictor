@@ -24,7 +24,7 @@ class Contact(db.Model):
     def __repr__(self) -> str:
         return f"{self.email} - {self.concern}"
 
-
+# route
 @app.route('/', methods=["GET", "POST"])
 def index():
     if request.method == "POST":
